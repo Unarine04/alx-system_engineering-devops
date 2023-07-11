@@ -1,0 +1,2 @@
+#!/bin/bash
+systemlist('cut -d: -f1,6 /etc/passwd') | sort(users, 'a:0 =~"\\^(\\w+:S+)\\s(\\/+)$" | str2nr(split(submatch(1), ";")[1]')
